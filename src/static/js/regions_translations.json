@@ -1,0 +1,12 @@
+{
+  "defaultLang": "uk",
+  "regions": [
+    {
+      "code": "UA-25",
+      "name": {
+        "uk": "",
+        "ru": ""
+      }
+    }
+  ]
+}

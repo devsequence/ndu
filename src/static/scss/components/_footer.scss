@@ -1,0 +1,103 @@
+.footer{
+  &-top{
+    background-color: $primary-100;
+    padding: 40rem 0;
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &-bottom{
+    background-color: rgba($primary-100, .9);
+    padding: 20rem 0;
+    font-size: 12rem;
+    color: $white;
+    .container{
+      display: flex;
+      justify-content: space-between;
+    }
+    a{
+      color: $white;
+      &:hover{
+        color: $secondary;
+      }
+    }
+  }
+
+  &-logo{
+    margin-right: auto;
+    width: 135rem;
+    a, img{
+      width: 100%;
+    }
+  }
+  &-item{
+    width: 100%;
+    margin-right: 170rem;
+    max-width: 255rem;
+    &__title{
+      font: 400 18rem/24rem $OpenSans;
+      color: $white;
+      margin-bottom: 24rem;
+    }
+    ul{
+      li{
+        font: 400 14rem/24rem $OpenSans;
+        color: $white;
+        margin-bottom: 10rem;
+      }
+      a{
+        color: $white;
+        &:hover{
+          color: $secondary;
+        }
+      }
+    }
+  }
+  &-social{
+    ul{
+      display: flex;
+      align-items: center;
+    }
+    li{
+      margin-right: 8rem;
+      &:last-child{
+        a{
+          svg{
+            path{
+              fill: $white;
+              stroke: transparent;
+            }
+          }
+          &:hover{
+            svg{
+              path{
+                fill: $secondary;
+                stroke: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    a{
+      width: 32rem;
+      height: 32rem;
+      svg{
+        width: 100%;
+        height: auto;
+        path{
+          stroke: $white;
+        }
+      }
+      &:hover{
+        svg{
+          path{
+            stroke: $secondary;
+          }
+        }
+      }
+    }
+  }
+}

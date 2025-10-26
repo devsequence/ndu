@@ -1,0 +1,4 @@
+# игнорировать все файлы в каталоге build/
+node_modules/
+.idea/
+test/
