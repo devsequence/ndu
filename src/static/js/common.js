@@ -48,31 +48,60 @@ $('.header-btn').on('click', function (e) {
     $('body').toggleClass('is-scroll');
 });
 function initMobileMenu() {
-    if ($(window).width() <= 768) {
-        // вимикаємо попередні слухачі, щоб не дублювалися при ресайзі
-        $('.header-nav .menu-item-has-children > a').off('click.mobileMenu');
-        $('.header-nav .menu-item-has-children > a').on('click.mobileMenu', function(e){
-            e.preventDefault();
-            const $parent = $(this).parent();
-            if ($parent.hasClass('active')) {
-                $parent.removeClass('active').children('ul').slideUp(250);
-            } else {
-                $parent.siblings('.menu-item-has-children')
-                    .removeClass('active')
-                    .children('ul').slideUp(250);
-                $parent.addClass('active').children('ul').slideDown(250);
-            }
-        });
-    } else {
-        $('.header-nav .menu-item-has-children > a').off('click.mobileMenu');
-        $('.header-nav .menu-item-has-children ul').removeAttr('style');
-        $('.header-nav .menu-item-has-children').removeClass('active');
+    const isMobile = $(window).width() <= 768;
+
+    // скидаємо попередні хендлери
+    $('.header-nav .menu-item-has-children > a').off('.mobileMenu');
+    $(document).off('.mobileMenu');
+
+    if (!isMobile) {
+        // десктоп — повернути все як було
+        $('.header-nav .menu-item-has-children').removeClass('active')
+            .children('ul').removeAttr('style');
+        return;
     }
+
+    // мобільна поведінка
+    $('.header-nav .menu-item-has-children > a').on('click.mobileMenu', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        const $item = $(this).parent('.menu-item-has-children');
+        const isOpen = $item.hasClass('active');
+
+        if (isOpen) {
+            // закриваємо поточний і ВСІ його нащадки
+            $item.removeClass('active')
+                .children('ul').stop(true, true).slideUp(250);
+            $item.find('.menu-item-has-children').removeClass('active')
+                .children('ul').stop(true, true).slideUp(250);
+        } else {
+            // закриваємо всіх СУСІДІВ і їх нащадків
+            $item.siblings('.menu-item-has-children')
+                .removeClass('active')
+                .children('ul').stop(true, true).slideUp(250)
+                .end()
+                .find('.menu-item-has-children').removeClass('active')
+                .children('ul').stop(true, true).slideUp(250);
+
+            // відкриваємо поточний
+            $item.addClass('active')
+                .children('ul').stop(true, true).slideDown(250);
+        }
+    });
+
+    // клік поза меню — закрити все
+    $(document).on('click.mobileMenu', function(e){
+        if (!$(e.target).closest('.header-nav').length) {
+            $('.header-nav .menu-item-has-children').removeClass('active')
+                .children('ul').stop(true, true).slideUp(250);
+        }
+    });
 }
+
 initMobileMenu();
-$(window).on('resize', function(){
-    initMobileMenu();
-});
+$(window).on('resize', initMobileMenu);
+
 
 
 $('.hero-slider').slick({
