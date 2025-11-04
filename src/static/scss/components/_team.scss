@@ -1,0 +1,45 @@
+.search-section{
+  margin-bottom: 48rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .search{
+    position: relative;
+    max-width: 416rem;
+    input{
+      padding: 18rem 48rem;
+    }
+    button{
+      position: absolute;
+      background-color: transparent;
+      top: 50%;
+      margin-top: -12rem;
+      img, svg{
+        width: 24rem;
+        height: 24rem;
+      }
+    }
+    .search-icon{
+      left: 16rem;
+    }
+    .reset-icon{
+      right: 16rem;
+    }
+  }
+  .filter{
+    select{
+      display: block;
+      font: 400 14rem/150% $OpenSans;
+      color: $black;
+      border: 1rem solid rgba($black, .1);
+      padding: 16rem;
+      border-radius: 10rem;
+      outline: none;
+      transition: all ease 300ms;
+      width: 250rem;
+      &:focus{
+        border-color: $primary;
+      }
+    }
+  }
+}

@@ -211,6 +211,12 @@ $(document).on('keydown', function(e) {
         $('.header-search-form').removeClass('active');
     }
 });
+$('.read-more').on('click', function (e) {
+    e.preventDefault();
+    $(this).find('span').toggleClass('hidden');
+    $(this).parents('.section-link').prev().toggleClass('active');
+});
+
 // $('.header-lang, .catalog-level').on('click', function (e) {
 //     const $this = $(this);
 //     if($this.hasClass('active')){

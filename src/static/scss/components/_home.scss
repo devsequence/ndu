@@ -62,7 +62,22 @@
   }
   &-desc{
     width: 50%;
-    max-width: 592rem;
+    max-width: 652rem;
+    p{
+      margin-bottom: 24rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    li{
+      margin-bottom: 14rem;
+      a{
+        color: $black;
+        &:hover{
+          color: $primary;
+        }
+      }
+    }
   }
   &-media{
     width: 50%;

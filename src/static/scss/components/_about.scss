@@ -1,0 +1,137 @@
+.leisure{
+  &-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24rem;
+  }
+  &-item{
+    width: 100%;
+    max-width: calc(33.3333% - 16rem);
+    background-color: $white;
+    box-shadow: $boxShadow1;
+    padding: 24rem;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    &__media{
+      width: 128rem;
+      height: 128rem;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1rem solid $primary;
+      margin:0 auto 10rem;
+      transition: all ease 300ms;
+      img{transition: all ease 300ms;
+        transform: scale(1);
+        width: 108rem;
+        height: 108rem;
+        object-fit: contain;
+        border-radius: 50%;
+      }
+    }
+    &__title{
+      font: 700 24rem/110% $PlayfairDisplay;
+      color: $black;
+      margin-bottom: 10rem;
+    }
+    &__info{
+      font: 400 20rem/110% $OpenSans;
+      color: $primary;
+      margin-bottom: 10rem;
+    }
+    &__text{
+      font-size: 14rem;
+    }
+    &__link{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &:hover{
+      .leisure-item{
+        &__media{
+          background-color: $secondary;
+          border-color: $secondary;
+          img{
+            transform: scale(1.1);
+          }
+        }
+        &__title{
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+.team{
+  .link-section{
+    text-align: center;
+  }
+  &-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24rem;
+    margin-bottom: 48rem;
+  }
+  &-item{
+    border-radius: 10rem;
+    width: 100%;
+    box-shadow: $boxShadow1;
+    max-width: calc(25% - 18rem);
+    background-color: $card;
+    &__desc{
+      padding: 24rem;
+    }
+    &__title{
+      font: 700 18rem/24rem $OpenSans;
+      color: $black;
+      margin-bottom: 16rem;
+      min-height: 48rem;
+    }
+    &__position{
+      font: 400 16rem/24rem $OpenSans;
+      color: $black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 16rem;
+    }
+    &__link{
+      a{
+        font: 400 16rem/24rem $OpenSans;
+        color: $primary;
+      }
+    }
+  }
+}
+.partner{
+  &-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40rem;
+  }
+  &-item{
+    width: 100%;
+    max-width: calc(12.5% - 40rem);
+    &._mobile{
+      display: none;
+    }
+    a{
+      img{
+        transition: all ease 300ms;
+        width: 100%;
+        transform: scale(1);
+      }
+      &:hover{
+        img{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
