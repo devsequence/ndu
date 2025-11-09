@@ -1,0 +1,32 @@
+.lessons{
+  &-wrap{
+    ul{
+      width: 100%;
+      max-width: 980rem;
+      margin: 0 auto;
+      li{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10rem;
+        gap: 10rem;
+        border-bottom: 1rem solid $primary;
+        margin-bottom: 16rem;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        span{
+          display: block;
+          width: 100%;
+          &:first-child{
+            max-width: 860rem;
+          }
+          &:last-child{
+            font-weight: 700;
+            max-width: 110rem;
+          }
+
+        }
+      }
+    }
+  }
+}

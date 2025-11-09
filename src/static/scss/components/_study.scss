@@ -1,0 +1,116 @@
+.program{
+  .container{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &-sidebar{
+    padding-right: 24rem;
+    &__nav{
+      width: 276rem;
+      background-color: $white;
+      box-shadow: $boxShadow1;
+      padding: 24rem 16rem;
+      border-radius: 10rem;
+      position: sticky;
+      top: 0;
+    }
+    &__title{
+      font-family: $PlayfairDisplay;
+      font-weight: 600;
+      margin-bottom: 12rem;
+      text-transform: uppercase;
+    }
+    ul{
+      li{
+        margin-bottom: 8rem;
+      }
+      a{
+        font-weight: 600;
+        font-size: 16rem;
+        color: $default;
+        &:hover, &.active{
+          color: $primary;
+        }
+      }
+    }
+  }
+  &-wrap{
+    width: 100%;
+    max-width: calc(100% - 300rem);
+    &__title{
+
+    }
+  }
+  &-inner{
+    margin-bottom: 48rem;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:nth-of-type(odd) {
+      .program-inner__title{
+        &:after{
+          background-color: $primary-100;
+        }
+      }
+    }
+    &:nth-of-type(even) {
+      .program-inner__title{
+        &:after{
+          background-color: $secondary;
+        }
+      }
+    }
+    &__title{
+      position: relative;
+      font:700 36rem/110% $PlayfairDisplay;
+      margin-bottom: 24rem;
+      padding-bottom: 16rem;
+      &:after{
+        position: absolute;
+        content: '';
+        left: 0;
+        height: 6rem;
+        width: 132rem;
+        bottom: 0;
+        border-radius: 40rem;
+      }
+    }
+    &__text{
+      margin-bottom: 24rem;
+    }
+    &__wrap{
+      display: flex;
+      gap: 24rem;
+    }
+  }
+  &-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background-color: $white;
+    box-shadow: $boxShadow1;
+    padding: 24rem;
+    text-align: center;
+    border-radius: 10rem;
+    h4{
+      font: 700 24rem/110%  $PlayfairDisplay;
+      margin-bottom: 16rem;
+    }
+    p{
+      text-align: left;
+      margin-bottom: 16rem;
+      font-size: 16rem;
+    }
+    a{
+      font-size: 16rem;
+      line-height: 110%;
+      color: $primary;
+      margin: auto 0 0 ;
+      &:hover{
+        color: $primary-100;
+      }
+    }
+  }
+}

@@ -181,7 +181,7 @@
       line-height: inherit;
     }
   }
-  .btn-secondary, .btn-primary {
+  .btn-secondary, .btn-primary, .load-more {
     text-align: center;
     padding: 12rem 24rem;
     font-size: 16rem;
@@ -213,7 +213,7 @@
     }
   }
   .about{
-    .container{ }
+    .container{}
     &-desc{
       width: 100%;
       margin-bottom: 32rem;
@@ -225,9 +225,10 @@
   }
   .faculties{
     &-wrap {
+      margin: 0;
       .item{
-        max-width: calc(100% - 20rem  );
-        margin-bottom: 40rem;
+        max-width: 100%;
+        margin:0 0 24rem;
         &:last-child{
           margin-bottom: 0;
         }
@@ -274,7 +275,7 @@
       height: 280rem;
     }
   }
-  .resource{
+  .resource, .partner{
     &-wrap{
       flex-wrap: nowrap;
     }
@@ -290,26 +291,27 @@
         display: flex;
       }
     }
-    .resource-marquee {
+    .resource-marquee, .partner-marquee {
       overflow: hidden;
       position: relative;
       width: 100%;
     }
-    .resource-wrap {
+    .resource-wrap, .partner-wrap {
       display: flex;
       gap: 10rem;
       width: max-content;
       animation: marquee 25s linear infinite;
     }
 
-    .resource-item {
+    .resource-item, .partner-item {
       flex: 0 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .resource-item img {
+    .resource-item img ,
+    .partner-item img {
       height: 30rem;
       width: auto;
       object-fit: contain;
@@ -317,7 +319,8 @@
       transition: filter .3s;
     }
 
-    .resource-item:hover img {
+    .resource-item:hover img,
+    .partner-item:hover img {
       filter: grayscale(0);
     }
 
@@ -332,9 +335,10 @@
   }
   .news{
     &-wrap{
+      margin: 0;
       .item{
-        max-width: calc(100% - 40rem);
-        margin-bottom: 40rem;
+        max-width: 100%;
+        margin:0 0 24rem;
         &:last-child{
           margin-bottom: 0;
         }
@@ -367,6 +371,280 @@
     &-bottom{
       .container{
         flex-direction: column;
+      }
+    }
+  }
+  .bread-crumbs{
+    position: relative;
+    padding: 0 0 24rem;
+    width: 100%;
+    overflow: auto;
+    li{
+      white-space: nowrap;
+    }
+  }
+  .about{
+    .btn-section{
+      flex-direction: column;
+      gap: 16rem;
+    }
+  }
+  .leisure{
+    &-item{
+      max-width: 100%;
+      padding: 12rem;
+      &__media{
+        width: 38rem;
+        height: 38rem;
+        img{
+          width: 38rem;
+          height: 38rem;
+        }
+      }
+      &__title{
+        font-size: 18rem;
+      }
+      &__info{
+        font-size: 16rem;
+      }
+      &__text{
+        font-size: 12rem;
+      }
+      &__link{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+  }
+  .program{
+    &-sidebar{
+      display: none;
+    }
+    &-wrap{
+      max-width: 100%;
+    }
+    &-inner{
+      &__wrap{
+        flex-wrap: wrap;
+      }
+      &__title{
+        font-size: 28rem;
+        line-height: 110%;
+      }
+    }
+    &-item{
+      h4{
+        font-size: 18rem;
+        line-height: 110%;
+      }
+    }
+  }
+  #next-month{
+    display: none;
+  }
+  .month{
+    width: 100%;
+
+  }
+  .calendar{
+    &-button{
+      top: 15rem;
+      margin-top: 0;
+      width: 48rem;
+      height: 48rem;
+      &.calendar-prev{
+        left: 20rem;
+      }
+      &.calendar-next{
+        right: 20rem;
+      }
+    }
+  }
+  .title-block{
+    font-size: 24rem;
+    line-height: normal;
+  }
+  .about-desc {
+    .contact-item{
+      width: 100%;
+      padding: 12rem;
+    }
+  }
+  .about-contact{
+    .about-media{
+      height: auto;
+    }
+  }
+  .top-form{
+    padding: 16rem;
+    .title-block{
+      margin-bottom: 24rem;
+    }
+  }
+  .contact-page{
+    height: 417rem;
+  }
+  .symbolics,
+  .text-block{
+    p, li, a{
+      font-size: 16rem;
+      line-height: 26rem;
+    }
+  }
+  .lessons{
+    &-wrap {
+      ul{
+        li {
+          span{
+            &:last-child{
+              max-width: 50rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .symbolics{
+    &-wrap{
+      flex-direction: column;
+    }
+  }
+  .about-program{
+    &__list {
+      li{
+        max-width: 100%;
+      }
+    }
+  }
+  .study-program {
+    .item{
+      max-width: 100%;
+    }
+  }
+  .admission-conditions{
+    &__wrap{
+      flex-direction: column-reverse;
+    }
+    &__media{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+    &__desc {
+      .text-section {
+        ul{
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    &__text{
+      margin-bottom: 24rem;
+      flex-direction: column;
+      ul{
+
+      }
+    }
+  }
+  .price{
+    &-item{
+      width: 100%;
+      overflow: auto;
+      ul{
+        width: 768rem;
+      }
+    }
+  }
+  .contact-form{
+    padding: 16rem;
+  }
+  .map-wrap{
+    width: 100%;
+  }
+  .pagination{
+    padding: 24rem 0;
+    a, span{
+      width: 40rem;
+      height: 40rem;
+    }
+  }
+  .load-more{
+    width: 100%;
+  }
+  .about-number{
+    margin-bottom: 24rem;
+    width: 50%;
+    &__number{
+      font-size: 48rem;
+    }
+    &__title{
+      font-size: 18rem;
+    }
+  }
+  .project{
+    &-wrap{
+      gap: 24rem;
+    }
+    .item{
+      max-width: 100%;
+    }
+  }
+  .scientific{
+    &-item{
+      width: 100%;
+      flex-direction: column;
+      &__media{
+        width: 100%;
+      }
+      &__desc{
+        padding: 12rem 16rem;
+      }
+      &__title{
+        margin-bottom: 16rem;
+        font-size: 18rem;
+      }
+    }
+  }
+  .repository{
+    &-item{
+      &:nth-child(odd){
+        flex-direction: column;
+      }
+      &:nth-child(even){
+        flex-direction: column;
+      }
+      &__media{
+        height: 260rem;
+      }
+      &__link{
+        flex-direction: column;
+        margin-bottom: 24rem;
+        a{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .about-search{
+    label{
+      max-width: 180rem;
+    }
+  }
+  .search-section{
+    flex-direction: column;
+    gap: 16rem;
+    .search{
+      width: 100%;
+    }
+    .filter{
+      width: 100%;
+      select{
+        width: 100%;
       }
     }
   }

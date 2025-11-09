@@ -171,11 +171,16 @@ body{
     text-align: center;
   }
 }
+.title-block{
+  font:700 36rem/normal $PlayfairDisplay;
+  margin-bottom: 24rem;
+}
 .text-section{
   ul{
     li{
       padding-left: 20rem;
       position: relative;
+      span{color: $primary}
       &:before{
         position: absolute;
         content: '';
@@ -378,6 +383,47 @@ body{
         color: $primary-100;
         &:hover{
           color: $secondary;
+        }
+      }
+    }
+  }
+  &-link{
+    a{
+      font: 400 16rem/24rem $OpenSans;
+      color: $primary;
+      &:hover{
+        color: $primary-100;
+      }
+    }
+  }
+  &-tag{
+    font: 400 16rem/24rem $OpenSans;
+    margin-bottom: 16rem;
+    display: flex;
+    justify-content: space-between;
+    &__list{
+      color: $primary;
+      position: relative;
+      padding-left: 32rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      &:before{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 24rem;
+        height: 24rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6159 4H17.7139C18.9763 4 19.9997 5.02335 19.9997 6.28571V10.3838C19.9997 10.6869 19.8792 10.9776 19.6649 11.1919L11.9016 18.9552C11.009 19.8478 9.56175 19.8478 8.66913 18.9552L5.04447 15.3305C4.15184 14.4379 4.15184 12.9907 5.04447 12.098L12.8078 4.33474C13.0221 4.12041 13.3128 4 13.6159 4Z' stroke='%231E90FF' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.1429 8.00007C17.774 8.00007 18.2857 7.4884 18.2857 6.85721C18.2857 6.22603 17.774 5.71436 17.1429 5.71436C16.5117 5.71436 16 6.22603 16 6.85721C16 7.4884 16.5117 8.00007 17.1429 8.00007Z' fill='%231E90FF'/%3E%3C/svg%3E%0A");
+        background-size: cover;
+        background-position: center;
+      }
+      a{
+        font: 400 16rem/24rem $OpenSans;
+        color: $primary;
+        &:hover{
+          color: $primary-100;
         }
       }
     }

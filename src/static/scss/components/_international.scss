@@ -1,0 +1,143 @@
+.about-program{
+  &__list{
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16rem;
+    }
+    li{
+      width: 100%;
+      max-width: calc(50% - 8rem);
+      font-size: 16rem;
+    }
+  }
+}
+.study-program{
+  &__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16rem;
+  }
+  .item{
+    width: 100%;
+    max-width: calc(25% - 12rem);
+    padding: 24rem;
+    background-color: $white;
+    &-title{
+      min-height: auto;
+      font-size: 18rem;
+      line-height: 28rem;
+    }
+  }
+}
+.admission-conditions{
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__media{}
+  &__desc{
+    max-width: 724rem;
+    width: 100%;
+    .text-section{
+      display: flex;
+      justify-content: space-between;
+      ul{
+        max-width: 350rem;
+        width: 50%;
+        li{
+          font-size: 16rem;
+          line-height: 28rem;
+        }
+      }
+    }
+  }
+}
+.price{
+  &-wrap{
+    max-width: 980rem;
+    margin: 0 auto;
+  }
+  &-item{
+    ul{
+      border-radius: 10rem;
+      border: 1rem solid $gray;
+      overflow: hidden;
+    }
+    li{
+      display: flex;
+      border-bottom: 1rem solid $gray;
+      background-color: $white;
+      &:first-child{
+
+        background-color: $white-200;
+        span{
+          font-weight: 600;
+        }
+      }
+      &:last-child{
+        border-bottom: 0;
+      }
+      span{
+        width: 100%;
+        display: inline-block;
+        padding: 13.5rem 15rem;
+        font: 400 16rem/normal $OpenSans;
+        border-right:1rem solid $gray;
+        &:last-child{
+          border-right-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.contact{
+  &-form{
+    padding: 40rem;
+    background-color: $white;
+    width: 100%;
+    max-width: 700rem;
+    .modal-group{
+      margin-bottom: 20rem;
+    }
+    &__subtitle{
+      font-size: 16rem;
+      line-height: 150%;
+      color: rgba($black, .5);
+      margin-bottom: 40rem;
+    }
+  }
+  &-info{
+    font-size: 16rem;
+    line-height: 150%;
+    p{
+      margin-bottom: 24rem;
+    }
+    ul{
+      margin-bottom: 24rem;
+    }
+    li{
+      margin-bottom: 16rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      a{
+        color: $primary;
+      }
+    }
+  }
+}
+
+.map-wrap{
+  width: 664rem;
+  height: 368rem;
+  border-radius: 10rem;
+  overflow: hidden;
+  .map{
+    height: 100%;
+    width: 100%;
+  }
+}

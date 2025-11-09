@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	@@include('./includes/_head.html')
+</head>
+
+<body class="home">
+<!--page-wrapper-->
+<div class="page-wrapper">
+	@@include('./includes/_header.html')
+	<!--page-content-->
+	<div class="page-content">
+		<section class="about about-contact">
+			<div class="container">
+				<div class="bread-crumbs" data-asb="fade-in">
+					<ul>
+						<li><a href="#">Головна </a></li>
+						<li>Контакти</li>
+					</ul>
+				</div>
+				<div class="about-desc">
+					<div class="title-block" data-asb="fade-in">Маєте запитання або пропозиції? </div>
+					<div class="text-section" data-asb="fade-in">
+						<p>Будь ласка, зв'яжіться з нами за допомогою форми зв'язку на нашому веб-сайті. Ми завжди раді допомогти вам та відповісти на будь-які запитання, які ви може мати. Ми завжди раді чути від наших клієнтів та допомогти їм у будь-яких питаннях.</p>
+					</div>
+					<div class="contact-wrap">
+						<div class="contact-item">
+							<div class="contact-item__media">
+								<img class="svg-convert" src="../static/images/phone-call.svg" alt="phone-call">
+							</div>
+							<div class="contact-item__desc">
+								<h4>Номер телефону</h4>
+								<a href="tel:0463171922" target="_blank">04631) 7-19-22</a>
+							</div>
+						</div>
+						<div class="contact-item">
+							<div class="contact-item__media">
+								<img class="svg-convert" src="../static/images/local-two.svg" alt="local-two">
+							</div>
+							<div class="contact-item__desc">
+								<h4>Контактна адреса</h4>
+								<a href="#" target="_blank">м. Ніжин вул. Графська, 2 </a>
+							</div>
+						</div>
+						<div class="contact-item">
+							<div class="contact-item__media">
+								<img class="svg-convert" src="../static/images/alarm-clock.svg" alt="alarm-clock">
+							</div>
+							<div class="contact-item__desc">
+								<h4>Робочий час</h4>
+								<p>Пн–Сб: 08:00 – 20:00</p>
+							</div>
+						</div>
+						<div class="contact-item">
+							<div class="contact-item__media">
+								<img class="svg-convert" src="../static/images/email-successfully.svg" alt="email-successfully">
+							</div>
+							<div class="contact-item__desc">
+								<h4>E-mail</h4>
+								<a href="mailto:ndu@ndu.edu.ua" target="_blank">ndu@ndu.edu.ua</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-media" data-asb="fade-in">
+					<div class="top-form">
+						<div class="title-block">Напишіть нам</div>
+						<form action="#" data-asb="fade-in">
+							<div class="modal-group _half">
+								<label>Ваше ім’я</label>
+								<input type="text" placeholder="Ваше ім’я" required>
+							</div>
+							<div class="modal-group _half">
+								<label>E-Mail</label>
+								<input type="email" placeholder="E-Mail" required>
+							</div>
+							<div class="modal-group">
+								<label>Тема повідомлення</label>
+								<input type="text" placeholder="Тема повідомлення" required>
+							</div>
+							<div class="modal-group">
+								<label>Повідомлення</label>
+								<textarea placeholder="Повідомлення"></textarea>
+							</div>
+							<button type="submit" class="btn-primary">Відправити</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact-page">
+			<div class="map" id="map" data-map-pin="../static/images/pin.svg" data-map-zoom="17" data-map-lat="51.054286243714586" data-map-lng="31.88150818650464" ></div>
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					if ( document.querySelector('.map') ) {
+						var gmap = document.createElement('script');
+						gmap.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAt8S8uRnvbEkGevo-cdzjBRCRPGfsfbYI&callback=initMap&libraries=&v=weekly';
+						gmap.async = true;
+						gmap.defer = true;
+						document.head.appendChild(gmap);
+					}
+				});
+			</script>
+		</section>
+	</div>
+	<!--page-content-->
+	@@include('./includes/_footer.html')
+</div>
+<!--end-page-wrapper-->
+@@include('./includes/_scripts.html')
+</body>
+</html>
